@@ -5,6 +5,7 @@ describe 'posts' do
 		it 'shows a message' do 
 			visit '/posts' 
 		expect(page).to have_content 'No posts yet'
+		expect(page).to have_link 'Add a post'
 	end
 end
 
