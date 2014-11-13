@@ -1,41 +1,10 @@
-<section class="row each-post">
+<h3><%= post.title %></h3>
 
-  <div class="col-md-3">
-  </div>
 
-  <div class="col-md-6">  
-  
-    <% if post.image? %>
-        <%= image_tag post.image.url(:medium), class: "post-image" %>
-    <% end %>  
-  
-    <div class="post-content">
+  <% if post.picture.present? %>
+    <%= image_tag post.picture.url(:medium), class: 'uploaded-pic'  %> 
+  <% end %>
 
-      <h4><%= post.title %></h4>
-
-      <div class="row post-sub-content">
-
-        <div class="col-md-6 sub-content-1">
-          <p><%= time_ago_in_words(post.created_at) %> ago</p>
-          <% post.tags.each do |tag| %>
-            <%= link_to tag.text, tag %>
-          <% end %>
-        </div>
-
-        <div class="col-md-6 sub-content-2">
-          <div class="edit-delete-links">
-            <%= link_to "Edit", edit_post_path(post) %>
-            <%= link_to "Delete", post_path(post), method: :delete %>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  
-  </div>
-
-  <div class="col-md-3">
-  </div>
-
-</section>
+  <% post.tags.each do |tag| %>
+   <%= link_to tag.text, tag %>
+  <% end %>
