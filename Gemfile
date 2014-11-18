@@ -42,7 +42,6 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 
 # AWS - Amazon Web services
 gem 'aws-sdk'
-
 gem 'devise'
 
 # Add facebook authentication
