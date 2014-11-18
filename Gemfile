@@ -2,6 +2,19 @@ source 'https://rubygems.org'
 
 ruby "2.1.2" 
 
+# new stuff
+
+gem 'poltergeist', group: :test
+gem 'database_cleaner', group: :test
+
+
+
+
+
+
+# new stuff
+
+
 gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
