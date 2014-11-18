@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
     	:access_key_id => Rails.application.secrets.s3_access_key_id,
     	:secret_access_key => Rails.application.secrets.s3_secret_access_key
     }
-
+ 
 validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 has_and_belongs_to_many :tags
 
@@ -25,5 +25,7 @@ has_and_belongs_to_many :tags
 			self.tags << Tag.find_or_create_by(text: tag)
 		end
 	end
+
+
 end
  

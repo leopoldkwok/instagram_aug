@@ -45,7 +45,7 @@ describe 'creating posts' do
 		end
 
 		it 'displays no image, if no picture attached' do 
-				visit '/posts'
+			visit '/posts'
 			click_link 'New post'
 			fill_in 'Title', with: 'A brand new post'
 			click_button 'Create post'
