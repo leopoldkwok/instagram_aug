@@ -1,5 +1,9 @@
 class Post < ActiveRecord::Base
 
+  belongs_to :user
+  has_many :likes
+  has_many :comments
+
   has_attached_file :picture, 
   styles: { medium: "300x300> "}, 
   # , :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
